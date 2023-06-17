@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Works</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/homework.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="header">
+        <div class="container">
+            <div class="inner_header">
+                <a href="../index.html">
+                    <div class="logotype">
+                        <h2>Java<span>Script</span></h2>
+                    </div>
+                </a>
+                <ul class="menu">
+                    <li class="menu_link">
+                        <a href="../pages/home_works.html">Home Works</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="../pages/lessons.html">Lessons</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="https://t.me/NurDinBuy16" target="_blank">Send hw</a>
+                    </li>
+                </ul>
+                <button class="btn" id="btn-get">Click me!</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <a href="https://www.instagram.com/nurdinbuy/" target="_blank">
+                <div class="inner_footer">
+                    <h2>Made by NurDinBuy</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<style>
+    .valid {
+        color: green;
+    }
+
+    .invalid {
+        color: red;
+    }
+</style>
+
+<div id="big-block">
+    <div id="small-block"></div>
+</div>
+</body>
+<script src="/js/homework.js"></script>
+<input type="text" id="emailInput" placeholder="Введите Gmail-адрес">
+<p id="result"></p>
+<script src="/js/homework.js"></script>
+</html>
+
+<div>
+    <h1 id="counter">0</h1>
+    <button onclick="startCounter()">Start</button>
+    <button onclick="stopCounter()">Stop</button>
+    <button onclick="resumeCounter()">Resume</button>
+    <button onclick="clearCounter()">Clear</button>
+</div>
+
+<script>
+    let counter = 0;
+    let intervalId;
+
+    function startCounter() {
+        intervalId = setInterval(increaseCounter, 1000);
+    }
+
+    function increaseCounter() {
+        counter++;
+        document.getElementById("counter").textContent = counter;
+    }
+
+    function stopCounter() {
+        clearInterval(intervalId);
+    }
+
+    function resumeCounter() {
+        startCounter();
+    }
+
+    function clearCounter() {
+        counter = 0;
+        document.getElementById("counter").textContent = counter;
+        stopCounter();
+    }
+</script>
